@@ -9,7 +9,7 @@ export const Visualizer = ({ isAnimating }: { isAnimating: boolean }) => {
       viewBox="0 0 1440 320"
       preserveAspectRatio="none"
     >
-      {[0, 1, 2, 4].map((index) => (
+      {[0, 1, 2].map((index) => (
         <path
           key={index}
           fill="none"

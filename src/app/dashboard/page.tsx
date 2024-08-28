@@ -12,10 +12,10 @@ import {
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   DownloadIcon,
+  PauseIcon,
   PenIcon,
   PlayIcon,
   SquareIcon,
-  StopCircle,
   Volume2,
 } from "lucide-react";
 import { Visualizer } from "@/components/visualizer";
@@ -24,11 +24,10 @@ import {
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
+import { ThemeToggle } from "@/components/theme-toggle";
 
-export default function Home() {
+export default function Dashboard() {
   const [selectedVoice, setSelectedVoice] = useState("");
   const [inputText, setInputText] = useState("");
   const [isPlaying, setIsPlaying] = useState(true);
@@ -43,19 +42,54 @@ export default function Home() {
     <div className="min-h-screen p-4">
       <Card className="mx-auto border-none shadow-none  ">
         <CardHeader>
-          <Breadcrumb className="mb-8">
-            <BreadcrumbList>
-              <BreadcrumbItem>
-                <BreadcrumbLink href="/dashboard">Dashboard</BreadcrumbLink>
-              </BreadcrumbItem>
-            </BreadcrumbList>
-          </Breadcrumb>
+          <div className="flex justify-between items-center">
+            <Breadcrumb className="mb-8">
+              <BreadcrumbList>
+                <BreadcrumbItem>
+                  <BreadcrumbLink href="/dashboard">Dashboard</BreadcrumbLink>
+                </BreadcrumbItem>
+              </BreadcrumbList>
+            </Breadcrumb>
+            <ThemeToggle />
+          </div>
           <CardTitle className="text-3xl font-bold">
             Story-To-Speech Generator
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="space-y-6">
+          <div className="mt-6">
+            <div className="border border-2 rounded-lg  items-center justify-center">
+              <div className="flex justify-between">
+                <div className="flex justify-start gap-4">
+                  {isPlaying ? (
+                    <Button
+                      onClick={() => setIsPlaying(false)}
+                      className="mt-5 ml-5 "
+                    >
+                      <PauseIcon className="fill-white dark:fill-slate-900 h-4 w-4" />
+                    </Button>
+                  ) : (
+                    <Button
+                      onClick={() => setIsPlaying(true)}
+                      className="mt-5 ml-5"
+                    >
+                      <PlayIcon className="fill-white dark:fill-slate-900 h-4 w-4" />
+                    </Button>
+                  )}
+                  <Button className="mt-5">
+                    Download Audio
+                    <DownloadIcon className="ml-2 h-4 w-4" />
+                  </Button>
+                </div>
+
+                <p className="m-5 text-2xl font-semibold">
+                  {!isPlaying ? "Click Play To Start" : "Playing Your Story"}
+                </p>
+              </div>
+              <Visualizer isAnimating={isPlaying} />
+            </div>
+          </div>
+          <div className="space-y-6 mt-8">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">
                 Select Voice
@@ -93,38 +127,6 @@ export default function Home() {
               <Button onClick={handleGenerate}>
                 <PenIcon className="mr-2 h-4 w-4" /> Generate Random Story
               </Button>
-            </div>
-            <div className="mt-6">
-              <div className="border border-2 rounded-lg  items-center justify-center">
-                <div className="flex justify-between">
-                  <div className="flex justify-start gap-4">
-                    {isPlaying ? (
-                      <Button
-                        onClick={() => setIsPlaying(false)}
-                        className="mt-5 ml-5 "
-                      >
-                        <SquareIcon fill="white" className="h-4 w-4" />
-                      </Button>
-                    ) : (
-                      <Button
-                        onClick={() => setIsPlaying(true)}
-                        className="mt-5 ml-5"
-                      >
-                        <PlayIcon fill="white" className="h-4 w-4" />
-                      </Button>
-                    )}
-                    <Button className="mt-5">
-                      Download Audio
-                      <DownloadIcon className="ml-2 h-4 w-4" />
-                    </Button>
-                  </div>
-
-                  <p className="m-5 text-2xl font-semibold">
-                    {!isPlaying ? "Click Play To Start" : "Playing Your Story"}
-                  </p>
-                </div>
-                <Visualizer isAnimating={isPlaying} />
-              </div>
             </div>
           </div>
         </CardContent>

@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import {
-  ArrowLeft,
   BookIcon,
   LibraryIcon,
   LogOutIcon,
@@ -14,6 +13,7 @@ import {
   UserIcon,
   VideoIcon,
 } from "lucide-react";
+import { ThemeToggle } from "./theme-toggle";
 
 export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,7 +32,7 @@ export default function Sidebar() {
         fixed inset-y-0 left-0 z-10 w-64 p-4 border-r transform transition-transform duration-300 ease-in-out
         ${isOpen ? "translate-x-0" : "-translate-x-full"}
         lg:translate-x-0 lg:static lg:block
-        bg-white dark:bg-gray-900
+        bg-[#e4eeef] dark:bg-[#111a2d]
       `}
       >
         <div className=" border-b p-8 ">
@@ -109,11 +109,7 @@ export default function Sidebar() {
               </li>
             </ul>
           </div>
-          <div className="mt-4 p-8">
-            <p className="text-xs text-muted-foreground">
-              25 Credits Left of Text to Speech
-            </p>
-          </div>
+          <div className="mt-4 p-8">Only 25 Credits Left</div>
         </nav>
       </aside>
     </>
