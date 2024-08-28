@@ -19,12 +19,11 @@ import {
   Volume2,
 } from "lucide-react";
 import { Visualizer } from "@/components/visualizer";
-import { StopIcon } from "@radix-ui/react-icons";
 
 export default function Home() {
   const [selectedVoice, setSelectedVoice] = useState("");
   const [inputText, setInputText] = useState("");
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(true);
 
   const voices = ["Morgan", "Zeke", "Amy", "Ava", "Caleb"];
 
@@ -77,47 +76,41 @@ export default function Home() {
                 <Volume2 className="mr-2 h-4 w-4" /> Generate Speech
               </Button>
               <Button onClick={handleGenerate}>
-                <PenIcon className="mr-2 h-4 w-4" /> Generate Random Text
+                <PenIcon className="mr-2 h-4 w-4" /> Generate Random Story
               </Button>
             </div>
-
             <div className="mt-6">
-              <div className="bg-gray-200 rounded-lg h-[150px] flex items-center justify-center">
-                {isPlaying ? (
-                  <div className="flex items-center space-x-0.5">
-                    {[...Array(5)].map((_, i) => (
-                      <div
-                        key={i}
-                        className="bg-teal-500 animate-pulse "
-                        style={{
-                          height: `${Math.random() * 60 + 20}%`,
-                          animationDelay: `${i * 0.2}s`,
-                        }}
+              <div className="bg-black dark:bg-white rounded-lg  items-center justify-center">
+                <div className="flex justify-between">
+                  <div className="flex justify-start gap-4">
+                    {isPlaying ? (
+                      <Button
+                        variant="main"
+                        onClick={() => setIsPlaying(false)}
+                        className="mt-5 ml-5 "
                       >
-                        <Visualizer isAnimating={isPlaying} />
-                      </div>
-                    ))}
+                        <SquareIcon fill="white" className="h-4 w-4" />
+                      </Button>
+                    ) : (
+                      <Button
+                        variant="main"
+                        onClick={() => setIsPlaying(true)}
+                        className="mt-5 ml-5"
+                      >
+                        <PlayIcon fill="white" className="h-4 w-4" />
+                      </Button>
+                    )}
+                    <Button variant="main" className="mt-5">
+                      Download Audio
+                      <DownloadIcon className="ml-2 h-4 w-4" />
+                    </Button>
                   </div>
-                ) : (
-                  <p className="text-gray-500 ">Generate Speech And Play</p>
-                )}
-              </div>
-              <div className="flex justify-end gap-4  my-4">
-                {isPlaying ? (
-                  <Button variant="main">
-                    Click to Stop
-                    <SquareIcon fill="white" className="ml-2 h-4 w-4" />
-                  </Button>
-                ) : (
-                  <Button variant="main">
-                    Click to play
-                    <PlayIcon className="ml-2 h-4 w-4" />
-                  </Button>
-                )}
-                <Button variant="main">
-                  Download Audio
-                  <DownloadIcon className="ml-2 h-4 w-4" />
-                </Button>
+
+                  <p className="m-5 text-main text-2xl text-white font-semibold">
+                    {!isPlaying ? "Click Play To Start" : "Playing Your Story"}
+                  </p>
+                </div>
+                <Visualizer isAnimating={isPlaying} />
               </div>
             </div>
           </div>
