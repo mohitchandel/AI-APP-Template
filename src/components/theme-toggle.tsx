@@ -14,9 +14,11 @@ export function ThemeToggle() {
   };
 
   return (
-    <div className="mt-4 flex items-center">
+    <div className="flex items-center">
       <Button
+        className="rounded-full"
         size="icon"
+        variant={"outline"}
         onClick={() => handleThemeChange(theme === "dark" ? "light" : "dark")}
       >
         <p>

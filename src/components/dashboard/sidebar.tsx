@@ -10,10 +10,9 @@ import {
   MicIcon,
   PenIcon,
   Settings2Icon,
+  StarIcon,
   UserIcon,
-  VideoIcon,
 } from "lucide-react";
-import { ThemeToggle } from "./theme-toggle";
 
 export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,7 +31,7 @@ export default function Sidebar() {
         fixed inset-y-0 left-0 z-10 w-64 p-4 border-r transform transition-transform duration-300 ease-in-out
         ${isOpen ? "translate-x-0" : "-translate-x-full"}
         lg:translate-x-0 lg:static lg:block
-        bg-[#e4eeef] dark:bg-[#111a2d]
+        bg-[#f1f5f9] dark:bg-[#111a2d]
       `}
       >
         <div className=" border-b p-8 ">
@@ -74,15 +73,15 @@ export default function Sidebar() {
                 </a>
               </li>
               <li className="flex items-center space-x-2">
-                <VideoIcon className="w-4 h-4" />
+                <StarIcon className="w-4 h-4" />
                 <a href="#" className="text-muted-foreground">
-                  Create Clip
+                  Hall Of Fame
                 </a>
               </li>
               <li className="flex items-center space-x-2">
                 <BookIcon className="w-4 h-4" />
                 <a href="#" className="text-muted-foreground">
-                  Create Story
+                  Generate Story
                 </a>
               </li>
             </ul>
