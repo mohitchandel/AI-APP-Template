@@ -79,12 +79,8 @@ const Navbar = () => {
         <nav className="hidden justify-between lg:flex">
           <div className="flex items-center gap-6">
             <div className="flex items-center gap-2">
-              <img
-                src="https://www.shadcnblocks.com/images/block/block-1.svg"
-                className="w-8"
-                alt="logo"
-              />
-              <span className="text-xl font-bold">Shadcn Blocks</span>
+              <img src="/logo.png" className="w-8" alt="logo" />
+              <span className="text-xl font-bold">Hermaya</span>
             </div>
             <div className="flex items-center">
               <a
@@ -199,12 +195,8 @@ const Navbar = () => {
         <div className="block lg:hidden">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <img
-                src="https://www.shadcnblocks.com/images/block/block-1.svg"
-                className="w-8"
-                alt="logo"
-              />
-              <span className="text-xl font-bold">Shadcn Blocks</span>
+              <img src="/logo.png" className="w-8" alt="logo" />
+              <span className="text-xl font-bold">Hermaya</span>
             </div>
             <Sheet>
               <SheetTrigger asChild>
@@ -216,12 +208,8 @@ const Navbar = () => {
                 <SheetHeader>
                   <SheetTitle>
                     <div className="flex items-center gap-2">
-                      <img
-                        src="https://www.shadcnblocks.com/images/block/block-1.svg"
-                        className="w-8"
-                        alt="logo"
-                      />
-                      <span className="text-xl font-bold">Shadcn Blocks</span>
+                      <img src="/logo.png" className="w-8" alt="logo" />
+                      <span className="text-xl font-bold">Hermaya</span>
                     </div>
                   </SheetTitle>
                 </SheetHeader>

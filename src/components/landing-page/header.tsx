@@ -29,12 +29,8 @@ const Hero = () => {
       <div className="container">
         <div className="mx-auto flex max-w-5xl flex-col items-center">
           <div className="z-10 flex flex-col items-center gap-6 text-center">
-            <img
-              src="https://www.shadcnblocks.com/images/block/block-1.svg"
-              alt="logo"
-              className="h-16"
-            />
-            <Badge>UI Blocks</Badge>
+            <img src="/logo.png" alt="logo" className="h-16" />
+            <Badge>Hermaya</Badge>
             <div>
               <h1 className="mb-6 text-2xl font-bold lg:text-5xl">
                 Build your next project with Blocks
