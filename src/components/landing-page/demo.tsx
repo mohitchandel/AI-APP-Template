@@ -11,12 +11,11 @@ const Demo = () => {
               <MessagesSquare className="size-6" />
             </span>
             <h1 className="my-6 text-pretty text-3xl font-bold lg:text-4xl">
-              Welcome to Our Website
+              See Our AI in Action
             </h1>
             <p className="mb-8 max-w-xl text-muted-foreground lg:text-lg">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Elig
-              doloremque mollitia fugiat omnis! Porro facilis quo animi
-              consequatur. Explicabo.
+              Watch our demo video to see how our AI-powered tools can elevate
+              your storytelling. Get started with a free trial today!
             </p>
             <div className="flex w-full flex-col justify-center gap-2 sm:flex-row lg:justify-start">
               <Button

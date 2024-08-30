@@ -17,7 +17,7 @@ const Hero = () => {
   }, [theme]);
 
   return (
-    <section className="relative overflow-hidden py-32">
+    <section id="home" className="relative overflow-hidden py-32">
       <Particles
         className="absolute inset-0"
         quantity={100}
@@ -32,13 +32,17 @@ const Hero = () => {
             <img src="/logo.png" alt="logo" className="h-16" />
             <Badge>Hermaya</Badge>
             <div>
-              <h1 className="mb-6 text-2xl font-bold lg:text-5xl">
-                Build your next project with Blocks
+              <h1 className="mb-6 text-2xl font-bold lg:text-6xl py-2 overflow-visible">
+                Unleash Your Imagination with{" "}
+                <span className="bg-gradient-to-r from-[#e03cbf] via-[#bb81eb] to-[#bd15e6] inline-block text-transparent bg-clip-text py-2">
+                  AI Powered Storytelling
+                </span>
               </h1>
               <p className="text-muted-foreground lg:text-xl">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Elig
-                doloremque mollitia fugiat omnis! Porro facilis quo animi
-                consequatur. Explicabo.
+                Create captivating stories in seconds with our AI story
+                generator. Transform your ideas into text, hear them with
+                text-to-speech, and even bring characters to life with voice
+                cloning!
               </p>
             </div>
             <div className="mt-4 flex justify-center gap-2">
@@ -49,7 +53,7 @@ const Hero = () => {
             </div>
             <div className="mt-20 flex flex-col items-center gap-4">
               <p className="text-center: text-muted-foreground lg:text-left">
-                Built with open-source technologies
+                Powered By
               </p>
               <div className="flex flex-wrap items-center justify-center gap-4">
                 <a
@@ -60,8 +64,8 @@ const Hero = () => {
                   )}
                 >
                   <img
-                    src="https://www.shadcnblocks.com/images/block/logos/shadcn-ui-small.svg"
-                    alt="company logo"
+                    src="/power-by-icons/hugging-face.svg"
+                    alt="huggingFace logo"
                     className="h-6 saturate-0 transition-all group-hover:saturate-100"
                   />
                 </a>
@@ -73,9 +77,9 @@ const Hero = () => {
                   )}
                 >
                   <img
-                    src="https://www.shadcnblocks.com/images/block/logos/typescript-small.svg"
-                    alt="company logo"
-                    className="h-6 saturate-0 transition-all group-hover:saturate-100"
+                    src="/power-by-icons/stability-ai.svg"
+                    alt="vercel logo"
+                    className="h-6 saturate-0 transition-all group-hover:saturate-100 dark:fill-white"
                   />
                 </a>
 

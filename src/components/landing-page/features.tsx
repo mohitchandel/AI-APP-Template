@@ -1,66 +1,68 @@
 import {
   Blocks,
+  BookTemplate,
   ChevronRight,
+  Globe2,
   Infinity,
   Laptop,
   ListEnd,
+  Mic2Icon,
+  Navigation,
   Zap,
   ZoomIn,
 } from "lucide-react";
 import { NeonGradientCard } from "../magicui/neon-gradient-card";
+import { MagicWandIcon, SpeakerLoudIcon } from "@radix-ui/react-icons";
 
 const features = [
   {
-    title: "Quality",
+    title: "Create Unique Stories Instantly",
     description:
-      "Our UI blocks are designed with quality in mind. We make sure that every block is pixel perfect and visually appealing.",
-    icon: <ZoomIn className="size-6" />,
-    link: "#",
+      "Craft compelling stories with just a few clicks. Our AI story generator helps you brainstorm, plot, and write original tales tailored to your style and preferences. Whether you’re a seasoned writer or a beginner, unleash your creativity and watch your ideas come to life effortlessly.",
+    icon: <MagicWandIcon className="size-6" />,
   },
   {
-    title: "Customizable",
+    title: "Bring Your Stories to Life",
     description:
-      "You can easily customize our UI blocks to fit your needs. Change colors, fonts, and more with our easy-to-use interface.",
-    icon: <Blocks className="size-6" />,
-    link: "#",
+      "Convert your written stories into spoken words with our advanced text-to-speech feature. Choose from a variety of realistic voice options to match the tone and emotion of your narrative, making your stories even more immersive.",
+    icon: <SpeakerLoudIcon className="size-6" />,
   },
   {
-    title: "Responsive",
+    title: "Clone Voices for Your Characters",
     description:
-      "Our UI blocks are fully responsive and look great on any device. No matter the screen size, your website will look amazing.",
-    icon: <Laptop className="size-6" />,
-    link: "#",
+      "Give your characters unique voices with our state-of-the-art voice cloning technology. Easily generate distinct voices for different characters, enhancing the storytelling experience and making your stories truly one-of-a-kind.",
+    icon: <Mic2Icon className="size-6" />,
   },
   {
-    title: "Easy to Use",
+    title: "Intuitive and User-Friendly Design",
     description:
-      "Our UI blocks are easy to use and require no coding knowledge. Simply drag and drop the blocks you want and you are good to go.",
-    icon: <ListEnd className="size-6" />,
-    link: "#",
+      "Navigate seamlessly with our simple, user-friendly interface. Designed for both novice and experienced users, our app makes it easy to create, edit, and share stories. Spend less time learning the tool and more time crafting your next masterpiece.",
+    icon: <Navigation className="size-6" />,
   },
   {
-    title: "Fast",
+    title: "Start with Ready-Made Templates",
     description:
-      "Our UI blocks are optimized for speed and performance. Your website will load fast and provide a great user experience.",
-    icon: <Zap className="size-6" />,
-    link: "#",
+      "Kickstart your writing with our customizable story templates. From fairy tales to sci-fi adventures, select a template that matches your genre and customize it to fit your vision. Perfect for those who need a little inspiration to get started.",
+    icon: <BookTemplate className="size-6" />,
   },
   {
-    title: "Modern",
+    title: "Create Stories in Any Language",
     description:
-      "Our UI blocks are designed with modern trends in mind. Your website will look fresh and up-to-date with our blocks.",
-    icon: <Infinity className="size-6" />,
-    link: "#",
+      "Write and generate stories in multiple languages with ease. Our multilingual support allows you to reach a global audience and make your stories accessible to readers and listeners around the world.",
+    icon: <Globe2 className="size-6" />,
   },
 ];
 
 const Features = () => {
   return (
-    <section className="relative py-32 before:absolute before:inset-0 before:bg-primary/10 before:[mask-image:url(https://www.shadcnblocks.com/images/block/waves.svg)] before:[mask-repeat:repeat] before:[mask-size:_64px_32px]">
+    <section
+      id="features"
+      className="relative py-32 before:absolute before:inset-0 before:bg-primary/10 before:[mask-image:url(https://www.shadcnblocks.com/images/block/waves.svg)] before:[mask-repeat:repeat] before:[mask-size:_64px_32px]"
+    >
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-transparent to-background"></div>
       <div className="container relative">
         <h2 className="mb-8 max-w-screen-sm text-balance text-2xl font-semibold lg:text-4xl">
-          Build your own website with our UI blocks
+          Transform Your Storytelling Experience with Our AI Services
         </h2>
         <div className="z-30 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {features.map((feature, index) => (
@@ -76,13 +78,6 @@ const Features = () => {
                     {feature.description}
                   </p>
                 </div>
-                <a
-                  href={feature.link}
-                  className="flex items-center gap-2 text-sm font-medium"
-                >
-                  Learn more
-                  <ChevronRight className="w-4" />
-                </a>
               </div>
             </NeonGradientCard>
           ))}
