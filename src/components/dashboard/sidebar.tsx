@@ -4,15 +4,15 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import {
   BookIcon,
-  LibraryIcon,
   LogOutIcon,
   Menu,
   MicIcon,
+  MusicIcon,
   PenIcon,
   Settings2Icon,
-  StarIcon,
   UserIcon,
 } from "lucide-react";
+import Link from "next/link";
 
 export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -56,33 +56,36 @@ export default function Sidebar() {
             <ul className="space-y-2 mt-2">
               <li className="flex items-center space-x-2">
                 <PenIcon className="w-4 h-4" />
-                <a href="#" className="text-muted-foreground">
+                <Link href="/dashboard" className="text-muted-foreground">
                   Text to Speech
-                </a>
+                </Link>
               </li>
               <li className="flex items-center space-x-2">
                 <MicIcon className="w-4 h-4" />
-                <a href="#" className="text-primary">
+                <Link
+                  href="/dashboard/voice-cloning"
+                  className="text-muted-foreground"
+                >
                   Voice Cloning
-                </a>
+                </Link>
               </li>
               <li className="flex items-center space-x-2">
-                <LibraryIcon className="w-4 h-4" />
-                <a href="#" className="text-muted-foreground">
-                  Voice Library
-                </a>
-              </li>
-              <li className="flex items-center space-x-2">
-                <StarIcon className="w-4 h-4" />
-                <a href="#" className="text-muted-foreground">
-                  Hall Of Fame
-                </a>
+                <MusicIcon className="w-4 h-4" />
+                <Link
+                  href="/dashboard/generate-music"
+                  className="text-muted-foreground"
+                >
+                  Generate Music
+                </Link>
               </li>
               <li className="flex items-center space-x-2">
                 <BookIcon className="w-4 h-4" />
-                <a href="#" className="text-muted-foreground">
+                <Link
+                  href="/dashboard/generate-story"
+                  className="text-muted-foreground"
+                >
                   Generate Story
-                </a>
+                </Link>
               </li>
             </ul>
 
@@ -112,26 +115,5 @@ export default function Sidebar() {
         </nav>
       </aside>
     </>
-  );
-}
-function ClipboardIcon(
-  props: React.JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>
-) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <rect width="8" height="4" x="8" y="2" rx="1" ry="1" />
-      <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
-    </svg>
   );
 }

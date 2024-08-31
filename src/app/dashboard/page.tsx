@@ -1,11 +1,11 @@
-import { TextStory } from "@/components/dashboard/text-story";
+import { TextSpeech } from "@/components/dashboard/text-speech";
 import { ThemeToggle } from "@/components/theme-toggle";
 import {
   Breadcrumb,
   BreadcrumbItem,
-  BreadcrumbLink,
   BreadcrumbList,
 } from "@/components/ui/breadcrumb";
+import Link from "next/link";
 
 export default function Dashboard() {
   return (
@@ -14,13 +14,13 @@ export default function Dashboard() {
         <Breadcrumb>
           <BreadcrumbList>
             <BreadcrumbItem>
-              <BreadcrumbLink href="/dashboard">Dashboard</BreadcrumbLink>
+              <Link href="/dashboard">Dashboard</Link>
             </BreadcrumbItem>
           </BreadcrumbList>
         </Breadcrumb>
         <ThemeToggle />
       </div>
-      <TextStory />
+      <TextSpeech />
     </div>
   );
 }

@@ -10,16 +10,10 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import {
-  DownloadIcon,
-  PauseIcon,
-  PenIcon,
-  PlayIcon,
-  Volume2,
-} from "lucide-react";
+import { DownloadIcon, MusicIcon, PauseIcon, PlayIcon } from "lucide-react";
 import { Visualizer } from "@/components/dashboard/visualizer";
 
-export const TextStory = () => {
+export const MusicGeneration = () => {
   const [selectedVoice, setSelectedVoice] = useState("");
   const [inputText, setInputText] = useState("");
   const [isPlaying, setIsPlaying] = useState(true);
@@ -34,9 +28,7 @@ export const TextStory = () => {
     <>
       <Card className="mx-auto border-none shadow-none  ">
         <CardHeader>
-          <CardTitle className="text-3xl font-bold">
-            Story-To-Speech Generator
-          </CardTitle>
+          <CardTitle className="text-3xl font-bold">Generate Music</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="mt-6">
@@ -65,7 +57,7 @@ export const TextStory = () => {
                 </div>
 
                 <p className="m-5 text-2xl font-semibold">
-                  {!isPlaying ? "Click Play To Start" : "Playing Your Story"}
+                  {!isPlaying ? "Click Play To Start" : "Playing Your Music"}
                 </p>
               </div>
               <Visualizer isAnimating={isPlaying} />
@@ -74,28 +66,10 @@ export const TextStory = () => {
           <div className="space-y-6 mt-8">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">
-                Select Voice
-              </label>
-              <Select onValueChange={setSelectedVoice}>
-                <SelectTrigger>
-                  <SelectValue placeholder="Choose a voice" />
-                </SelectTrigger>
-                <SelectContent>
-                  {voices.map((voice) => (
-                    <SelectItem key={voice} value={voice}>
-                      {voice}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Enter Text
+                Enter Prompt
               </label>
               <Textarea
-                placeholder="Type or paste your text here"
+                placeholder="Ancient European music with flute and bagpipers."
                 value={inputText}
                 onChange={(e) => setInputText(e.target.value)}
                 rows={5}
@@ -104,10 +78,7 @@ export const TextStory = () => {
 
             <div className="flex justify-end gap-4">
               <Button onClick={handleGenerate}>
-                <Volume2 className="mr-2 h-4 w-4" /> Generate Speech
-              </Button>
-              <Button onClick={handleGenerate}>
-                <PenIcon className="mr-2 h-4 w-4" /> Generate Random Story
+                <MusicIcon className="mr-2 h-4 w-4" /> Generate Music
               </Button>
             </div>
           </div>

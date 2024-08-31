@@ -56,57 +56,33 @@ const Hero = () => {
                 Powered By
               </p>
               <div className="flex flex-wrap items-center justify-center gap-4">
-                <a
-                  href="#"
-                  className={cn(
-                    buttonVariants({ variant: "outline" }),
-                    "group px-3"
-                  )}
-                >
+                <a href="#" className={"group px-3"}>
                   <img
                     src="/power-by-icons/hugging-face.svg"
                     alt="huggingFace logo"
-                    className="h-6 saturate-0 transition-all group-hover:saturate-100"
+                    className="w-16 transition-all"
                   />
                 </a>
-                <a
-                  href="#"
-                  className={cn(
-                    buttonVariants({ variant: "outline" }),
-                    "group px-3"
-                  )}
-                >
+                <a href="#" className={"group px-3"}>
                   <img
                     src="/power-by-icons/stability-ai.svg"
-                    alt="vercel logo"
-                    className="h-6 saturate-0 transition-all group-hover:saturate-100 dark:fill-white"
+                    alt="stability ai logo"
+                    className="w-12 transition-all"
                   />
                 </a>
 
-                <a
-                  href="#"
-                  className={cn(
-                    buttonVariants({ variant: "outline" }),
-                    "group px-3"
-                  )}
-                >
+                <a href="#" className={"group px-3"}>
                   <img
-                    src="https://www.shadcnblocks.com/images/block/logos/react-icon.svg"
-                    alt="company logo"
-                    className="h-6 saturate-0 transition-all group-hover:saturate-100"
+                    src="/power-by-icons/google.svg"
+                    alt="google"
+                    className="w-12 transition-all"
                   />
                 </a>
-                <a
-                  href="#"
-                  className={cn(
-                    buttonVariants({ variant: "outline" }),
-                    "group px-3"
-                  )}
-                >
+                <a href="#" className={"group px-3"}>
                   <img
-                    src="https://www.shadcnblocks.com/images/block/logos/tailwind-small.svg"
-                    alt="company logo"
-                    className="h-4 saturate-0 transition-all group-hover:saturate-100"
+                    src="/power-by-icons/microsoft.svg"
+                    alt="microsoft"
+                    className="w-12 transition-all"
                   />
                 </a>
               </div>
