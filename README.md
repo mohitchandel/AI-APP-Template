@@ -1,3 +1,8 @@
+https://github.com/user-attachments/assets/65bdb2bf-0932-495a-b804-3037173608a5
+
+
+
+
 # AI APP Template
 This project is a comprehensive AI application template featuring a landing page and a dashboard with various AI-powered services. It's built using Next.js and tRPC, with Supabase for database management and Clerk for authentication.
 
