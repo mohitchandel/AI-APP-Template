@@ -59,9 +59,8 @@ const Features = () => {
         </h2>
         <div className="z-30 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {features.map((feature, index) => (
-            <NeonGradientCard className=" items-center justify-center text-center">
+            <NeonGradientCard  key={index} className=" items-center justify-center text-center">
               <div
-                key={index}
                 className="flex flex-col gap-10 rounded-lg border bg-background p-8"
               >
                 <div>

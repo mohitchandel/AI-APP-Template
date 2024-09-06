@@ -11,6 +11,7 @@ import { cn } from "@/lib/utils";
 import { Menu } from "lucide-react";
 import { ThemeToggle } from "../theme-toggle";
 import Link from "next/link";
+import Image from "next/image";
 
 const Navbar = () => {
   return (
@@ -19,7 +20,7 @@ const Navbar = () => {
         <nav className="hidden justify-between lg:flex">
           <div className="flex items-center gap-6">
             <div className="flex items-center gap-2">
-              <img src="/logo.png" className="w-8" alt="logo" />
+              <Image src="/logo.png" className="w-8" alt="logo" />
               <span className="text-xl font-bold">TheAI</span>
             </div>
             <div className="flex items-center">
@@ -92,7 +93,7 @@ const Navbar = () => {
         <div className="block lg:hidden">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <img src="/logo.png" className="w-8" alt="logo" />
+              <Image src="/logo.png" className="w-8" alt="logo" />
               <span className="text-xl font-bold">TheAI</span>
             </div>
             <Sheet>
@@ -105,7 +106,7 @@ const Navbar = () => {
                 <SheetHeader>
                   <SheetTitle>
                     <div className="flex items-center gap-2">
-                      <img src="/logo.png" className="w-8" alt="logo" />
+                      <Image src="/logo.png" className="w-8" alt="logo" />
                       <span className="text-xl font-bold">TheAI</span>
                     </div>
                   </SheetTitle>

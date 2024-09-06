@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { MessagesSquare, Play } from "lucide-react";
+import Image from "next/image";
 
 const Demo = () => {
   return (
@@ -31,7 +32,7 @@ const Demo = () => {
               </Button>
             </div>
           </div>
-          <img
+          <Image
             src="/ai.jpg"
             alt="placeholder hero"
             className="max-h-96 w-full rounded-md object-cover"
