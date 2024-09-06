@@ -30,7 +30,7 @@ const Hero = () => {
       <div className="container">
         <div className="mx-auto flex max-w-5xl flex-col items-center">
           <div className="z-10 flex flex-col items-center gap-6 text-center">
-            <Image src="/logo.png" alt="logo" className="h-16" />
+            <Image width={32} height={16} src="/logo.png" alt="logo" className="h-16" />
             <Badge>TheAI</Badge>
             <div>
               <h1 className="mb-6 text-2xl font-bold lg:text-6xl py-2 overflow-visible">
@@ -59,6 +59,8 @@ const Hero = () => {
               <div className="flex flex-wrap items-center justify-center gap-4">
                 <a href="#" className={"group px-3"}>
                   <Image
+                  width={16}
+                  height={16}
                     src="/power-by-icons/hugging-face.svg"
                     alt="huggingFace logo"
                     className="w-16 transition-all"
@@ -66,6 +68,8 @@ const Hero = () => {
                 </a>
                 <a href="#" className={"group px-3"}>
                   <Image
+                  width={12}
+                  height={12}
                     src="/power-by-icons/stability-ai.svg"
                     alt="stability ai logo"
                     className="w-12 transition-all"
@@ -74,6 +78,8 @@ const Hero = () => {
 
                 <a href="#" className={"group px-3"}>
                   <Image
+                  width={12}
+                  height={12}
                     src="/power-by-icons/google.svg"
                     alt="google"
                     className="w-12 transition-all"
@@ -81,6 +87,8 @@ const Hero = () => {
                 </a>
                 <a href="#" className={"group px-3"}>
                   <Image
+                  width={12}
+                  height={12}
                     src="/power-by-icons/microsoft.svg"
                     alt="microsoft"
                     className="w-12 transition-all"

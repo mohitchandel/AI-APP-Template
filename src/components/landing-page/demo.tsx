@@ -33,6 +33,8 @@ const Demo = () => {
             </div>
           </div>
           <Image
+          width={96}
+          height={96}
             src="/ai.jpg"
             alt="placeholder hero"
             className="max-h-96 w-full rounded-md object-cover"
