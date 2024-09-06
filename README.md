@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# AI APP Template
+This project is a comprehensive AI application template featuring a landing page and a dashboard with various AI-powered services. It's built using Next.js and tRPC, with Supabase for database management and Clerk for authentication.
 
-## Getting Started
+## Features
 
-First, run the development server:
+- Landing Page: Introduces users to the AI services offered.
 
+- Dashboard: A central hub for accessing various AI tools.
+  
+  ### - AI Services:
+
+    - Text-to-Speech
+    - Voice Cloning
+    - Music Generation
+    - Story Generation
+
+
+- Authentication: Powered by Clerk
+- Database: Managed by Supabase
+
+## Prerequisites
+Before you begin, ensure you have the following installed:
+
+Node.js (LTS version recommended)
+
+npm or yarn
+
+### Setup
+
+#### 1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/mohitchandel/ai-app-template.git
+cd ai-template-project
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+#### 2. Install dependencies:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+`npm install or yarn install`
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+#### 3. Set up environment variables:
 
-## Learn More
+Create a .env.local file in the root directory and add the following variables:
+```plaintext
+# Supabase keys
+SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
 
-To learn more about Next.js, take a look at the following resources:
+# Clerk variables
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
+CLERK_SECRET_KEY=your_clerk_secret_key
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Replace your_* with your actual Supabase and Clerk credentials.
 
-## Deploy on Vercel
+#### 4. Run the development server:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+`npm run dev or yarn dev`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Open http://localhost:3000 in your browser to see the application.
+
+### Project Structure
+
+- /pages: Contains the main pages of the application
+- /components: Reusable React components
+- /server: API routes for tRPC
+- /supabase: Supabase client
+
+
+#### Contributing
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+
+#### credits
+- UI : [Shadcn UI](https://ui.shadcn.com/)
+- Components : [shadcnblocks](https://www.shadcnblocks.com/)
