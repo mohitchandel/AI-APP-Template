@@ -20,9 +20,9 @@ import {
 import { Visualizer } from "@/components/dashboard/visualizer";
 
 export const TextSpeech = () => {
-  const [selectedVoice, setSelectedVoice] = useState("");
-  const [inputText, setInputText] = useState("");
-  const [isPlaying, setIsPlaying] = useState(true);
+  const [selectedVoice, setSelectedVoice] = useState<string>("");
+  const [inputText, setInputText] = useState<string>("");
+  const [isPlaying, setIsPlaying] = useState<boolean>(false);
 
   const voices = ["Morgan", "Zeke", "Amy", "Ava", "Caleb"];
 

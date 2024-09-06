@@ -3,10 +3,10 @@
 import { ExternalLink } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button, buttonVariants } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
 import Particles from "@/components/magicui/particles";
 import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 const Hero = () => {
   const { theme } = useTheme();
@@ -30,7 +30,7 @@ const Hero = () => {
         <div className="mx-auto flex max-w-5xl flex-col items-center">
           <div className="z-10 flex flex-col items-center gap-6 text-center">
             <img src="/logo.png" alt="logo" className="h-16" />
-            <Badge>Hermaya</Badge>
+            <Badge>TheAI</Badge>
             <div>
               <h1 className="mb-6 text-2xl font-bold lg:text-6xl py-2 overflow-visible">
                 Unleash Your Imagination with{" "}
@@ -47,9 +47,9 @@ const Hero = () => {
             </div>
             <div className="mt-4 flex justify-center gap-2">
               <Button>Get Started</Button>
-              <Button variant="outline">
-                Learn more <ExternalLink className="ml-2 h-4" />
-              </Button>
+              <Link href="/dashboard" className={buttonVariants({ variant: "default" })}>
+                Checkout Dashboard <ExternalLink className="ml-2 h-4" />
+              </Link>
             </div>
             <div className="mt-20 flex flex-col items-center gap-4">
               <p className="text-center: text-muted-foreground lg:text-left">

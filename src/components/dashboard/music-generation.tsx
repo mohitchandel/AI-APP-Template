@@ -2,23 +2,14 @@
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { DownloadIcon, MusicIcon, PauseIcon, PlayIcon } from "lucide-react";
 import { Visualizer } from "@/components/dashboard/visualizer";
 
 export const MusicGeneration = () => {
-  const [selectedVoice, setSelectedVoice] = useState("");
-  const [inputText, setInputText] = useState("");
-  const [isPlaying, setIsPlaying] = useState(true);
+  const [inputText, setInputText] = useState<string>("");
+  const [isPlaying, setIsPlaying] = useState<boolean>(false);
 
-  const voices = ["Morgan", "Zeke", "Amy", "Ava", "Caleb"];
 
   const handleGenerate = () => {
     setIsPlaying(!isPlaying);

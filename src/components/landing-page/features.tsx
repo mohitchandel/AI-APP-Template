@@ -1,15 +1,8 @@
 import {
-  Blocks,
   BookTemplate,
-  ChevronRight,
   Globe2,
-  Infinity,
-  Laptop,
-  ListEnd,
   Mic2Icon,
   Navigation,
-  Zap,
-  ZoomIn,
 } from "lucide-react";
 import { NeonGradientCard } from "../magicui/neon-gradient-card";
 import { MagicWandIcon, SpeakerLoudIcon } from "@radix-ui/react-icons";

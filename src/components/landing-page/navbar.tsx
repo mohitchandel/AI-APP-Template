@@ -1,19 +1,5 @@
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import { Button, buttonVariants } from "@/components/ui/button";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu";
+import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
 import {
   Sheet,
   SheetContent,
@@ -22,7 +8,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
-import { Book, Menu, Sunset, Trees, Zap } from "lucide-react";
+import { Menu } from "lucide-react";
 import { ThemeToggle } from "../theme-toggle";
 import Link from "next/link";
 
@@ -34,7 +20,7 @@ const Navbar = () => {
           <div className="flex items-center gap-6">
             <div className="flex items-center gap-2">
               <img src="/logo.png" className="w-8" alt="logo" />
-              <span className="text-xl font-bold">Hermaya</span>
+              <span className="text-xl font-bold">TheAI</span>
             </div>
             <div className="flex items-center">
               <Link
@@ -88,8 +74,18 @@ const Navbar = () => {
             </div>
           </div>
           <div className="flex gap-2">
-            <Button variant={"outline"}>Log in</Button>
-            <Button>Sign up</Button>
+            <Link
+              href="/sign-in"
+              className={buttonVariants({ variant: "outline" })}
+            >
+              Log in
+            </Link>
+            <Link
+              href="/sign-up"
+              className={buttonVariants({ variant: "default" })}
+            >
+              Sign up
+            </Link>
             <ThemeToggle />
           </div>
         </nav>
@@ -97,7 +93,7 @@ const Navbar = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
               <img src="/logo.png" className="w-8" alt="logo" />
-              <span className="text-xl font-bold">Hermaya</span>
+              <span className="text-xl font-bold">TheAI</span>
             </div>
             <Sheet>
               <SheetTrigger asChild>
@@ -110,7 +106,7 @@ const Navbar = () => {
                   <SheetTitle>
                     <div className="flex items-center gap-2">
                       <img src="/logo.png" className="w-8" alt="logo" />
-                      <span className="text-xl font-bold">Hermaya</span>
+                      <span className="text-xl font-bold">TheAI</span>
                     </div>
                   </SheetTitle>
                 </SheetHeader>
@@ -130,8 +126,18 @@ const Navbar = () => {
                 </div>
                 <div className="border-t pt-4">
                   <div className="mt-2 flex flex-col gap-3">
-                    <Button variant={"outline"}>Log in</Button>
-                    <Button>Sign up</Button>
+                    <Link
+                      href="/sign-in"
+                      className={buttonVariants({ variant: "outline" })}
+                    >
+                      Log in
+                    </Link>
+                    <Link
+                      href="/sign-up"
+                      className={buttonVariants({ variant: "outline" })}
+                    >
+                      Sign up
+                    </Link>
                   </div>
                 </div>
               </SheetContent>

@@ -32,7 +32,7 @@ const Demo = () => {
             </div>
           </div>
           <img
-            src="https://www.shadcnblocks.com/images/block/placeholder-1.svg"
+            src="/ai.jpg"
             alt="placeholder hero"
             className="max-h-96 w-full rounded-md object-cover"
           />

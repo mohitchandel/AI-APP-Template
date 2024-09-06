@@ -34,16 +34,16 @@ export default function Sidebar() {
         bg-[#f1f5f9] dark:bg-[#111a2d]
       `}
       >
-        <div className=" border-b p-8 ">
+        <div className="border-b p-8 ">
           <div className="flex flex-col items-center">
             <Avatar className="w-16 h-16 mb-4">
-              <AvatarImage src="/placeholder-user.jpg" alt="User Avatar" />
-              <AvatarFallback>MC</AvatarFallback>
+              <AvatarImage  src="https://github.com/shadcn.png" alt="User Avatar" />
+              <AvatarFallback>JD</AvatarFallback>
             </Avatar>
             <div className="text-center">
-              <p className="text-lg font-semibold">Mohit Chandel</p>
+              <p className="text-lg font-semibold">John Deo</p>
               <p className="text-sm text-muted-foreground">Free Plan</p>
-              <Button variant="secondary" size="sm" className="mt-2">
+              <Button variant="default" size="sm" className="mt-2">
                 Upgrade
               </Button>
             </div>
