@@ -35,7 +35,7 @@ npm or yarn
 #### 1. Clone the repository:
 ```bash
 git clone https://github.com/mohitchandel/ai-app-template.git
-cd ai-template-project
+cd ai-app-template
 ```
 
 #### 2. Install dependencies:
